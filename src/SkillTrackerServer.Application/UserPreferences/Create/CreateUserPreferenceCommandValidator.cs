@@ -1,0 +1,13 @@
+﻿using FluentValidation;
+
+namespace SkillTrackerServer.Application.UserPreferences.Create
+{
+    internal sealed class CreateUserPreferenceCommandValidator : AbstractValidator<CreateUserPreferenceCommand>
+    {
+        public CreateUserPreferenceCommandValidator()
+        {
+            RuleFor(up => up.UserId).NotEmpty();
+            RuleFor(up => up.Theme).IsInEnum();
+        }
+    }
+}

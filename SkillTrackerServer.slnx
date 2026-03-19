@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/SkillTrackerServer.Application/SkillTrackerServer.Application.csproj" Id="855da1fe-1303-4a66-b187-5736c890aef6" />
     <Project Path="src/SkillTrackerServer.Domain/SkillTrackerServer.Domain.csproj" Id="be609012-530b-4b0e-ba12-75577b2b1a60" />
     <Project Path="src/SkillTrackerServer.SharedKernel/SkillTrackerServer.SharedKernel.csproj" Id="413c0606-a6d6-4027-a64c-5cbe0472d538" />
   </Folder>
