@@ -9,7 +9,6 @@ namespace SkillTrackerServer.Domain.InviteTokens
         public Guid ManagerId { get; set; }
         public DateTime ExpiresAt { get; set; }
         public bool IsUsed { get; set; }
-
         public static InviteToken Create(Guid managerId, DateTime expiresAt)
         {
             return new InviteToken
