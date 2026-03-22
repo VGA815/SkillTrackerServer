@@ -8,7 +8,6 @@ namespace SkillTrackerServer.Domain.Users
         public Guid Id { get; set; }
         public string Username { get; set; } = null!;
         public string FirstName { get; set; } = null!;
-        public UserRole UserRole { get; set; }
         public string? Position { get; set; }
         public string? LastName { get; set; }
         public string Email { get; set; } = null!;
@@ -17,7 +16,7 @@ namespace SkillTrackerServer.Domain.Users
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public void Verify() => IsVerified = true;
-        public static User Create(string username, string firstName, string? lastName, string email, string passwordHash, UserRole userRole, DateTime createdAt, string? position = null)
+        public static User Create(string username, string firstName, string? lastName, string email, string passwordHash, DateTime createdAt, string? position = null)
         {
             return new User
             {
@@ -27,7 +26,6 @@ namespace SkillTrackerServer.Domain.Users
                 LastName = lastName,
                 Email = email,
                 PasswordHash = passwordHash,
-                UserRole = userRole,
                 Position = position,
                 IsVerified = false,
                 CreatedAt = createdAt,

@@ -1,4 +1,5 @@
 ﻿using SkillTrackerServer.Application.Abstractions.Messaging;
+using SkillTrackerServer.Domain.Organizations;
 using SkillTrackerServer.Domain.Users;
 
 namespace SkillTrackerServer.Application.Users.Register

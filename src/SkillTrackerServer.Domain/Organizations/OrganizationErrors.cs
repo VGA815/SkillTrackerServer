@@ -20,5 +20,12 @@ namespace SkillTrackerServer.Domain.Organizations
         public static readonly Error InsufficientPermissions = Error.Failure(
             "Organizations.InsufficientPermissions",
             "You do not have sufficient permissions to perform this action");
+
+        public static readonly Error NameNotUnique = Error.Conflict(
+           "Organizations.NameNotUnique",
+           "An organization with this name already exists");
+        public static readonly Error CannotRemoveSelf = Error.Failure(
+           "Organizations.CannotRemoveSelf",
+           "You cannot remove yourself from the organization");
     }
 }

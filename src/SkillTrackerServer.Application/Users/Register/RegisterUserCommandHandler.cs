@@ -18,7 +18,7 @@ namespace SkillTrackerServer.Application.Users.Register
                 return Result.Failure<Guid>(UserErrors.EmailNotUnique);
             }
 
-            User user = User.Create(command.Username, command.FirstName, command.LastName, command.Email, passwordHasher.Hash(command.Password), command.UserRole, dateTimeProvider.UtcNow);
+            User user = User.Create(command.Username, command.FirstName, command.LastName, command.Email, passwordHasher.Hash(command.Password), dateTimeProvider.UtcNow);
             UserPreference userPreference = UserPreference.CreateDefault(user.Id);
 
 
