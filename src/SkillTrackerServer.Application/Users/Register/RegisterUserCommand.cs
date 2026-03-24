@@ -1,6 +1,4 @@
 ﻿using SkillTrackerServer.Application.Abstractions.Messaging;
-using SkillTrackerServer.Domain.Organizations;
-using SkillTrackerServer.Domain.Users;
 
 namespace SkillTrackerServer.Application.Users.Register
 {
@@ -11,16 +9,13 @@ namespace SkillTrackerServer.Application.Users.Register
         public string Username { get; set; } = null!;
         public string FirstName { get; set; }
         public string? LastName { get; set; }
-        public UserRole UserRole { get; set; }
-
-        public RegisterUserCommand(string email, string password, string username, string firstName, string? lastName, UserRole userRole)
+        public RegisterUserCommand(string email, string password, string username, string firstName, string? lastName)
         {
             Email = email;
             Password = password;
             Username = username;
             FirstName = firstName;
             LastName = lastName;
-            UserRole = userRole;
         }
     }
 }

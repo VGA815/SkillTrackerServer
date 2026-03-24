@@ -4,5 +4,6 @@
     <Project Path="src/SkillTrackerServer.Domain/SkillTrackerServer.Domain.csproj" Id="be609012-530b-4b0e-ba12-75577b2b1a60" />
     <Project Path="src/SkillTrackerServer.Infrastructure/SkillTrackerServer.Infrastructure.csproj" Id="701019fa-02a9-4329-a85d-60ac8235fe71" />
     <Project Path="src/SkillTrackerServer.SharedKernel/SkillTrackerServer.SharedKernel.csproj" Id="413c0606-a6d6-4027-a64c-5cbe0472d538" />
+    <Project Path="src/SkillTrackerServer.WebApi/SkillTrackerServer.WebApi.csproj" Id="9a7e6070-a639-4ba6-8ca8-000ac2de51da" />
   </Folder>
 </Solution>
