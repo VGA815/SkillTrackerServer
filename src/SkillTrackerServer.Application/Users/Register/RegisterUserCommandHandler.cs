@@ -25,6 +25,8 @@ namespace SkillTrackerServer.Application.Users.Register
             context.Users.Add(user);
             context.UserPreferences.Add(userPreference);
 
+            user.Raise(new UserRegisteredDomainEvent(user.Id, user.Email, user.Username));
+
             await context.SaveChangesAsync(cancellationToken);
 
             return user.Id;
