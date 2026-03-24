@@ -20,6 +20,7 @@ using Microsoft.IdentityModel.Tokens;
 using StackExchange.Redis;
 using System.Net.Mail;
 using System.Text;
+using SkillTrackerServer.Infrastructure.FileStorage;
 
 namespace SkillTrackerServer.Infrastructure
 {
@@ -32,6 +33,7 @@ namespace SkillTrackerServer.Infrastructure
                 .AddServices()
                 .AddDatabase(configuration)
                 .AddCaching(configuration)
+                .AddFileStorage(configuration)
                 .AddHealthChecks(configuration)
                 .AddAuthenticationInternal(configuration)
                 .AddCentrifugo(configuration)
@@ -102,15 +104,15 @@ namespace SkillTrackerServer.Infrastructure
 
             return services;
         }
-        //private static IServiceCollection AddFileStorage(this IServiceCollection services, IConfiguration configuration)
-        //{
-        //    services.Configure<MinioOptions>(
-        //            configuration.GetSection("Minio"));
+        private static IServiceCollection AddFileStorage(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.Configure<MinioOptions>(
+                    configuration.GetSection("Minio"));
 
-        //    services.AddSingleton<IFileStorage, MinioFileStorage>();
+            services.AddSingleton<IFileStorage, MinioFileStorage>();
 
-        //    return services;
-        //}
+            return services;
+        }
         private static IServiceCollection AddCaching(this IServiceCollection services, IConfiguration configuration)
         {
             services.Configure<RedisOptions>(
