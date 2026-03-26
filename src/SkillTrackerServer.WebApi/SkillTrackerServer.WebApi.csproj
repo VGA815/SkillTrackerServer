@@ -12,6 +12,7 @@
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
     <PackageReference Include="Microsoft.OpenApi" Version="2.3.9" />
+    <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
     <PackageReference Include="Serilog.Sinks.Seq" Version="9.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.0" />
 
@@ -21,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SkillTrackerServer.Application\SkillTrackerServer.Application.csproj" />
     <ProjectReference Include="..\SkillTrackerServer.Infrastructure\SkillTrackerServer.Infrastructure.csproj" />
     <ProjectReference Include="..\SkillTrackerServer.SharedKernel\SkillTrackerServer.SharedKernel.csproj" />
   </ItemGroup>

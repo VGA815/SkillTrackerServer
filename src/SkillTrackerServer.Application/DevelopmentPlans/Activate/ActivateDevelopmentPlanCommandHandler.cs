@@ -29,7 +29,7 @@ namespace SkillTrackerServer.Application.DevelopmentPlans.Activate
             if (plan.Status != DevelopmentPlanStatus.Draft)
                 return Result.Failure(DevelopmentPlanErrors.CannotActivate(command.PlanId, plan.Status));
 
-            plan.Status    = DevelopmentPlanStatus.Active;
+            plan.Status = DevelopmentPlanStatus.Active;
             plan.UpdatedAt = dateTimeProvider.UtcNow;
 
             plan.Raise(new DevelopmentPlanStatusChangedDomainEvent(plan.Id, DevelopmentPlanStatus.Active));

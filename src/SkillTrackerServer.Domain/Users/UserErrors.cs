@@ -19,7 +19,7 @@ namespace SkillTrackerServer.Domain.Users
             "The provided email is not unique");
         public static readonly Error UsernameNotUnique = Error.Conflict(
             "Users.UsernameNotUnique",
-            "The provided username is not nique");
+            "The provided username is not unique");
         public static readonly Error NotFoundByUsername = Error.NotFound(
             "Users.NotFoundByUsername",
             "The user with the specified username was not found");
